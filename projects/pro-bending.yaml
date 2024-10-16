@@ -1,0 +1,31 @@
+title: Pro-Bending
+summary:
+  - Dynamic
+  - Immersive
+  - End-to-end
+  - Solo project
+  - Godot
+  - Production-ready
+  - Scalable
+  - Maintainable
+  - Production pipeline
+  - Clear architecture
+features:
+  - Enemy AI system:
+      - Behavior tree
+      - Dynamic
+      - Responsive
+  - State Machine for actions
+  - Isolated, independent input handling
+  - Scalable animation pipeline:
+      - Manually cut animations
+      - Separately keyed timings for hitboxes and action states
+      - Retargeted animations for new models
+  - Level design in Blender:
+      - Dynamically changing colliders as level evolves
+  - Knockback system
+  - Stamina system
+  - HUD
+  - Peer-to-peer multiplayer:
+      - Server-authoritative deaths
+      - client-authoritative abilities
