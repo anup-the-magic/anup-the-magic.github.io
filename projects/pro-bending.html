@@ -20,6 +20,7 @@
   </head>
 
   <body class="is-preload">
+    <!-- TODO: We need better site nav -->
     <div id="wrapper" class="divided">
       <section class="wrapper style1 align-left color6">
         <!-- Header -->
@@ -44,24 +45,27 @@
       >
         <!-- Background -->
         <div class="content">
-          <p>
-            In seeking to recreate the dynamic, immersive bending battles from
-            The Legend of Korra, I wanted to create a full end-to-end game to to
-            apply everything I've learned.
-          </p>
+          <header><h2>TODO: This needs to be reworded</h2></header>
 
-          <p>
-            <!-- TODO: Needs rewording / expanding / limiting -->
-            As a solo project which I was passionate about, I was mindful of
-            keeping the feature-set constrained -- I wanted to make sure that
-            the full experience was fleshed out before additional breadth was
-            added. Despite this focus, I was able to ensure that the project
-            always felt production-ready, planning for features I knew would be
-            necessary down the line and keeping the features constrained. With a
-            concrete end goal always at the forefront, I was able to build out a
-            foundation for a multiplayer arena fighting game in a little under 3
-            months of dedicated dev work.
-          </p>
+          <div>
+            <p>
+              In seeking to recreate the dynamic, immersive bending battles from
+              The Legend of Korra, I wanted to create a full end-to-end game to
+              to apply everything I've learned. I built the entire game solo in
+              <b>Godot</b>, using a player model from Mixamo. Animations, level
+              assets, and textures are all either created from scratch in
+              <b>Blender</b>, or imported from Mixamo and then edited in
+              Blender. As a solo project which I was passionate about, I was
+              mindful of keeping the feature-set constrained -- I wanted to make
+              sure that the full experience was fleshed out before additional
+              breadth was added. With this focus, I was able to ensure that the
+              project always felt production-ready, planning for features I knew
+              would be necessary down the line and keeping the features
+              constrained. With a concrete end goal always at the forefront, I
+              was able to build out a foundation for a multiplayer arena
+              fighting game in a little under 3 months of dedicated dev work.
+            </p>
+          </div>
         </div>
 
         <div class="image">
@@ -83,7 +87,33 @@
           spotlight
           style1
           orient-left
-          content-align-center
+          content-align-left
+          image-position-center
+        "
+      >
+        <!-- Knockback and Stamina system -->
+        <div class="content">
+          <header><h2>Kockback and Stamina system</h2></header>
+          <div>
+            <p>
+              The key gameplay loop is governed by stamina and knockback.
+              Knockback is a forced movement that increases as players take
+              repeated hits, and knockback resistance recovers when not taking
+              hits; stamina is a diminishing resource that can be over-drained,
+              that recovers with inactivity. Abilities can consume stamina on
+              use, or when the player is hit, and abilities can add modifiers to
+              amount of knockback taken or even grant dodging invulnerability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="
+          spotlight
+          style1
+          orient-right
+          content-align-right
           image-position-center
         "
       >
@@ -92,7 +122,17 @@
           <header>
             <h2>Enemy AI System</h2>
           </header>
-          <p>I built out a</p>
+          <div>
+            <p>
+              Originally built to test out systems, the enemy controller is
+              built to simulate human behavior without significantly changing
+              ability controller functionality. Input management system gets
+              swapped out depending on if the user is a player or an AI, and the
+              character controller is completely isolated from input generation
+              -- thus, ability development and improvements to enemy AI can
+              occur independently.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -101,7 +141,7 @@
           spotlight
           style1
           orient-left
-          content-align-center
+          content-align-left
           image-position-center
         "
       >
@@ -111,7 +151,12 @@
             <h2>Character controller backed by State Machine</h2>
           </header>
           <p>
-            <!-- TODO: Stuff goes here -->
+            Built out layered state machine for character behavior, implementing
+            state transitions based on ability presses, held-button releases,
+            stamina exhaustion, and at the end of a timed ability. States can
+            have custom entry, exit, and have an explicit API to interact with
+            the character controller's state, adding movement speed modifiers,
+            knockback reduction, and collision avoidance.
           </p>
         </div>
       </section>
@@ -121,7 +166,7 @@
           spotlight
           style1
           orient-left
-          content-align-center
+          content-align-right
           image-position-center
         "
       >
@@ -130,8 +175,31 @@
           <header>
             <h2>Peer-to-peer multiplayer</h2>
           </header>
+          <!--
+          <ul class="alt">
+            <li>Hosting and joining games by IP</li>
+            <li>Replicated animations</li>
+            <li>Clientside hit detection</li>
+            <li>Server-authoritative movement</li>
+            <li>
+              <h6>
+                Future plans: Rollback netcode / clientside
+                movement prediction
+              </h6>
+            </li>
+          </ul>
+          -->
           <p>
-            <!-- TODO: Stuff goes here -->
+            The final feature before launching a downloadable demo, I built out
+            self-hosted peer-to-peer multiplayer sessions. Sessions are joinable
+            via IP, and animations and projectiles are synced across clients.
+            Hit detection was implemented on the client, while movement is
+            managed on the server (with the client sending inputs to be
+            validated and handled on the server).
+
+            <!-- TODO: Do we want to keep next steps? -->
+            Next steps are to implement clientside movement prediction with
+            rollback, and an actual lobby system for larger than 1v1 games.
           </p>
         </div>
       </section>
@@ -141,9 +209,19 @@
         <div class="inner">
           <div class="content">
             <h2>Additional Features</h2>
-            <div class="items style1 medium">
+            <div class="items style1 big">
+              <!-- Full gameplay loop -->
               <section>
-                <!-- Level design in Blender -->
+                <header>
+                  <h3>Full gameplay loop</h3>
+                </header>
+                <div class="content align-center">
+                  <!-- <span class="icon style2 major fa-save" /> -->
+                  <p>Main menu, restart screen, and victory conditions</p>
+                </div>
+              </section>
+              <!-- Level design in Blender -->
+              <section>
                 <header>
                   <h3>Level design in Blender</h3>
                 </header>
@@ -152,8 +230,8 @@
                   <p>Designed and textured a level from scratch</p>
                 </div>
               </section>
+              <!-- Asset import pipeline -->
               <section>
-                <!-- Asset import pipeline -->
                 <div class="inner">
                   <!-- <span class="icon style2 major fa-save" /> -->
                   <h3>Scalable asset import pipeline</h3>
@@ -181,33 +259,8 @@
                   </div>
                 </div>
               </section>
+              <!-- Input management system -->
               <section>
-                <!-- Peer-to-peer multiplayer -->
-                <div class="inner">
-                  <!-- <span class="icon style2 major fa-save" /> -->
-                  <h3>Peer-to-peer multiplayer</h3>
-                  <div class="index">
-                    <section>
-                      <div class="content align-center">
-                        <ul class="alt">
-                          <li>Hosting and joining games by IP</li>
-                          <li>Replicated animations</li>
-                          <li>Clientside hit detection</li>
-                          <li>Server-authoritative movement</li>
-                          <li>
-                            <h6>
-                              Future plans: Rollback netcode / clientside
-                              movement prediction
-                            </h6>
-                          </li>
-                        </ul>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <!-- Input management system -->
                 <div class="inner">
                   <!-- <span class="icon style2 major fa-save" /> -->
                   <h3>Input management system</h3>
@@ -215,40 +268,12 @@
                     <section>
                       <div class="content align-center">
                         <ul class="alt">
-                          <!-- TODO: Task -->
                           <li>Custom Keybindings</li>
-                          <li>
-                            Swappable Enemy AI without changing character
-                            controller
-                          </li>
-                          <!-- TODO: Task -->
                           <li>Controller Support</li>
+                          <li>Input buffering</li>
                         </ul>
                       </div>
                     </section>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <!-- Knockback and Stamina system -->
-                <div class="inner">
-                  <h3>Kockback and Stamina system</h3>
-                  <div class="content align-center">
-                    <ul class="alt">
-                      <li>
-                        Player resources that can be expended on ability usage
-                        and on hit
-                      </li>
-                      <li>
-                        Abilities which mitigate or completely eliminate
-                        knockback
-                      </li>
-                      <li>Abilities which add invulnerability frames</li>
-                      <li>
-                        Scaling forced-movement from knockback based on
-                        accumulated knockback
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </section>
@@ -267,7 +292,6 @@
     <script src="../template/assets/js/util.js"></script>
     <script src="../template/assets/js/main.js"></script>
 
-    <!-- TODO: dev only -->
-    <script src="https://livejs.com/live.js"></script>
+    <script type="type/javascript" src="https://livejs.com/live.js"></script>
   </body>
 </html>
