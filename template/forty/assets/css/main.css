@@ -512,7 +512,7 @@ ul.actions.fit.stacked {
   border-radius: 0;
   padding: 0;
 }
-.box.square, .grid > *, .grid-flex > * {
+.box.square, .grid > .square, .grid-flex > .square {
   aspect-ratio: 1/1;
 }
 .box .header, .grid > * .header, .grid-flex > * .header,
@@ -1062,7 +1062,7 @@ input[type=radio] + label:before {
   border-radius: 0;
   padding: 0;
 }
-.box.square, .grid > *, .grid-flex > * {
+.box.square, .grid > .square, .grid-flex > .square {
   aspect-ratio: 1/1;
 }
 .box .header, .grid > * .header, .grid-flex > * .header,
@@ -2586,10 +2586,10 @@ body.is-ie header.major > h1:after {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  padding: 2em;
   text-align: left;
 }
 .spotlights .spotlight > .content {
-  padding: 0 2em;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -2640,6 +2640,8 @@ body.is-ie header.major > h1:after {
   display: block;
   position: relative;
   width: 30%;
+  height: 100%;
+  margin: auto 2em;
 }
 .spotlights .spotlight > .image img {
   border-radius: 0;
@@ -2654,16 +2656,9 @@ body.is-ie header.major > h1:after {
     width: 100%;
   }
   .spotlights .spotlight > .content {
-    padding: 4em 3em 2em 3em;
     width: 100%;
   }
 }
-@media screen and (max-width: 736px) {
-  .spotlights .spotlight > .content {
-    padding: 3em 1.5em 1em 1.5em;
-  }
-}
-
 /* Table */
 .table-wrapper {
   -webkit-overflow-scrolling: touch;

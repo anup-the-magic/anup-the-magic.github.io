@@ -25,10 +25,11 @@
     @include vendor("flex-direction", "row");
 
     max-width: _size(spotlight);
+    padding: 2em;
 
     text-align: left;
     > .content {
-      padding: 0 2em;
+      // padding: 0 2em;
 
       @include vendor("display", "flex");
       @include vendor("flex-direction", "column");
@@ -83,6 +84,8 @@
       display: block;
       position: relative;
       width: 30%;
+      height: 100%;
+      margin: auto 2em;
 
       img {
         border-radius: 0;
@@ -137,7 +140,7 @@
       }
 
       > .content {
-        @include padding(4em, 3em);
+        // @include padding(4em, 3em);
         width: 100%;
       }
     }
@@ -146,7 +149,7 @@
   @include breakpoint("<=small") {
     .spotlight {
       > .content {
-        @include padding(3em, 1.5em);
+        // @include padding(3em, 1.5em);
       }
     }
   }

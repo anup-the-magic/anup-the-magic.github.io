@@ -5,7 +5,7 @@
 .grid-flex {
   > * {
     @extend .box;
-    @extend .square;
+    // @extend .square;
 
     margin: auto 1em;
   }
@@ -25,7 +25,7 @@
 .grid {
   > * {
     @extend .box;
-    @extend .square;
+    // @extend .square;
   }
 
   margin: 0 auto;
