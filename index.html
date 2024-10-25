@@ -13,20 +13,27 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="template/assets/css/main.css" />
+    <link rel="stylesheet" href="template/forty/assets/css/main.css" />
     <noscript
-      ><link rel="stylesheet" href="template/assets/css/noscript.css"
+      ><link rel="stylesheet" href="template/forty/assets/css/noscript.css"
     /></noscript>
   </head>
 
   <body class="is-preload">
+    <!-- Header -->
+    <nav id="header">
+      <div class="inner"></div>
+    </nav>
     <!-- Wrapper -->
     <div id="wrapper" class="divided">
-      <!-- One -->
+      <!-- Intro -->
+      <!-- TODO: This responsiveness is actually really bad -->
+      <!-- TODO: See "full vertical size" vs "half vertical size" -->
       <section
         class="
           banner
           style1
+          invert
           color6
           orient-left
           content-align-left
@@ -57,7 +64,7 @@
         <div class="image"><img src="images/anup.jpg" alt="" /></div>
       </section>
 
-      <!-- Two -->
+      <!-- About me -->
       <section class="wrapper style1 align-center">
         <div class="inner">
           <div class="index align-left">
@@ -70,8 +77,8 @@
                   I'm a software engineer with a decade of industry experience,
                   currently based out of <b>San Francisco, CA</b>.
                   <!-- TODO: does the background need to be this much? -->
-                  After graduating from <b>Caltech</b> with a B.S. in Mechanical
-                  Engineering and Computer Science, I worked at at
+                  After graduating from <b>Caltech</b> in 2016 with a B.S. in
+                  Mechanical Engineering and Computer Science, I worked at at
                   <b>Second Spectrum</b>, a sports analytics startup in Los
                   Angeles. In 2019, I started at <b>Google</b>, working on
                   backend services for the Google Home app. In October 2024, I
@@ -96,6 +103,7 @@
         </div>
       </section>
 
+      <!-- My Projects -->
       <section id="projects" class="wrapper style1 align-center">
         <div class="inner">
           <h2>My Projects</h2>
@@ -144,20 +152,31 @@
             </ul>
           </div>
           <div class="image">
-            <img src="template/images/spotlight01.jpg" alt="" />
+            <img src="template/forty/images/spotlight01.jpg" alt="" />
           </div>
         </section>
       </section>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="inner">
+        <ul class="copyright">
+          <li>
+            Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
     <!-- Scripts -->
-    <script src="template/assets/js/jquery.min.js"></script>
-    <script src="template/assets/js/jquery.scrollex.min.js"></script>
-    <script src="template/assets/js/jquery.scrolly.min.js"></script>
-    <script src="template/assets/js/browser.min.js"></script>
-    <script src="template/assets/js/breakpoints.min.js"></script>
-    <script src="template/assets/js/util.js"></script>
-    <script src="template/assets/js/main.js"></script>
+    <script src="/template/forty/assets/js/jquery.min.js"></script>
+    <script src="/template/forty/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/template/forty/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/template/forty/assets/js/browser.min.js"></script>
+    <script src="/template/forty/assets/js/breakpoints.min.js"></script>
+    <script src="/template/forty/assets/js/util.js"></script>
+    <script src="/template/forty/assets/js/main.js"></script>
 
     <script type="type/javascript" src="https://livejs.com/live.js"></script>
   </body>
