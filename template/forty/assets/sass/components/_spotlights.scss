@@ -13,9 +13,12 @@
     border-top: 0 !important;
   }
 
-  > section {
+  .spotlight {
     @include vendor("display", "flex");
     @include vendor("flex-direction", "row");
+
+    @include inner;
+
     background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
 
     > .image {
@@ -71,7 +74,7 @@
   }
 
   @include breakpoint("<=xlarge") {
-    > section {
+    .spotlight {
       > .image {
         width: 40%;
       }
@@ -83,7 +86,7 @@
   }
 
   @include breakpoint("<=large") {
-    > section {
+    .spotlight {
       > .image {
         width: 45%;
       }
@@ -95,7 +98,7 @@
   }
 
   @include breakpoint("<=medium") {
-    > section {
+    .spotlight {
       display: block;
 
       > .image {
@@ -110,11 +113,10 @@
   }
 
   @include breakpoint("<=small") {
-    > section {
+    .spotlight {
       > .content {
         @include padding(3em, 1.5em);
       }
     }
   }
 }
-
