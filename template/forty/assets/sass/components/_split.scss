@@ -1,0 +1,18 @@
+@mixin split {
+  > * {
+    border-top: _border_line();
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+.split {
+  @include split;
+}
+
+.iso {
+  border-top: _border_line();
+  border-bottom: _border_line();
+}

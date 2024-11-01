@@ -6,6 +6,21 @@
 -->
 
 <html>
+  <style>
+    .navigation {
+      display: flex;
+      background-color: #396267;
+      color: #78ced9;
+
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: #78ced9;
+        text-decoration: none;
+      }
+    }
+  </style>
   <head>
     <title>Anup Kishore | Projects | Pro-Bending</title>
     <meta charset="utf-8" />
@@ -13,284 +28,355 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="../template/assets/css/main.css" />
+    <link rel="stylesheet" href="../template/forty/assets/css/main.css" />
     <noscript
-      ><link rel="stylesheet" href="../template/assets/css/noscript.css"
+      ><link rel="stylesheet" href="../template/forty/assets/css/noscript.css"
     /></noscript>
   </head>
 
   <body class="is-preload">
-    <!-- TODO: We need better site nav -->
-    <div id="wrapper" class="divided">
-      <section class="wrapper style1 align-left color6">
-        <!-- Header -->
+    <div id="wrapper">
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/pro-bending.html" class="logo">
+              <strong>Project</strong>
+              <span>Pro-Bending</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header -->
+      <header id="header" class="style2 alt">
+        <a href="/" class="logo"
+          ><strong>Projects</strong> <span>Pro-Bending</span>
+        </a>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <section id="banner" class="short style2">
         <div class="inner">
-          <header>
+          <header class="major">
             <h1>Pro-Bending</h1>
+          </header>
+          <div class="content">
             <p>
               An <i>Avatar The Last Airbender</i>-inspired Arena fighting game
             </p>
-          </header>
-        </div>
-      </section>
-
-      <section
-        class="
-          spotlight
-          style1
-          orient-right
-          content-align-left
-          image-position-center
-        "
-      >
-        <!-- Background -->
-        <div class="content">
-          <header><h2>TODO: This needs to be reworded</h2></header>
-
-          <div>
-            <p>
-              In seeking to recreate the dynamic, immersive bending battles from
-              The Legend of Korra, I wanted to create a full end-to-end game to
-              to apply everything I've learned. I built the entire game solo in
-              <b>Godot</b>, using a player model from Mixamo. Animations, level
-              assets, and textures are all either created from scratch in
-              <b>Blender</b>, or imported from Mixamo and then edited in
-              Blender. As a solo project which I was passionate about, I was
-              mindful of keeping the feature-set constrained -- I wanted to make
-              sure that the full experience was fleshed out before additional
-              breadth was added. With this focus, I was able to ensure that the
-              project always felt production-ready, planning for features I knew
-              would be necessary down the line and keeping the features
-              constrained. With a concrete end goal always at the forefront, I
-              was able to build out a foundation for a multiplayer arena
-              fighting game in a little under 3 months of dedicated dev work.
-            </p>
           </div>
         </div>
-
-        <div class="image">
-          <img src="../template/images/spotlight01.jpg" />
-        </div>
+        <!-- TODO: background image here -->
+        <div class="image"><img src="/images/anup.jpg" alt="" /></div>
       </section>
 
-      <section class="wrapper style1 align-center">
-        <!-- Header -->
-        <div class="inner">
-          <header>
-            <h1>Key Features</h1>
-          </header>
-        </div>
-      </section>
+      <div id="main" class="split alt">
+        <!-- Summary -->
+        <div class="inner-kids inset-kids">
+          <section class="iso">
+            <h1>
+              &ShortDownArrow; TODO: This needs to be reworded &ShortDownArrow;
+            </h1>
+          </section>
 
-      <section
-        class="
-          spotlight
-          style1
-          orient-left
-          content-align-left
-          image-position-center
-        "
-      >
-        <!-- Knockback and Stamina system -->
-        <div class="content">
-          <header><h2>Kockback and Stamina system</h2></header>
-          <div>
-            <p>
-              The key gameplay loop is governed by stamina and knockback.
-              Knockback is a forced movement that increases as players take
-              repeated hits, and knockback resistance recovers when not taking
-              hits; stamina is a diminishing resource that can be over-drained,
-              that recovers with inactivity. Abilities can consume stamina on
-              use, or when the player is hit, and abilities can add modifiers to
-              amount of knockback taken or even grant dodging invulnerability.
-            </p>
-          </div>
-        </div>
-      </section>
+          <section>
+            <div class="content">
+              <div class="row">
+                <div class="col-6">
+                  <p>
+                    In seeking to recreate the dynamic, immersive bending
+                    battles from The Legend of Korra, I wanted to create a full
+                    end-to-end game to to apply everything I've learned. I built
+                    the entire game solo in <b>Godot</b>, using a player model
+                    from Mixamo. Animations, level assets, and textures are all
+                    either created from scratch in <b>Blender</b> and
+                    <b>Material Maker</b>, or imported from Mixamo and then
+                    edited in Blender.
+                  </p>
 
-      <section
-        class="
-          spotlight
-          style1
-          orient-right
-          content-align-right
-          image-position-center
-        "
-      >
-        <!-- Enemy AI System -->
-        <div class="content">
-          <header>
-            <h2>Enemy AI System</h2>
-          </header>
-          <div>
-            <p>
-              Originally built to test out systems, the enemy controller is
-              built to simulate human behavior without significantly changing
-              ability controller functionality. Input management system gets
-              swapped out depending on if the user is a player or an AI, and the
-              character controller is completely isolated from input generation
-              -- thus, ability development and improvements to enemy AI can
-              occur independently.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="
-          spotlight
-          style1
-          orient-left
-          content-align-left
-          image-position-center
-        "
-      >
-        <!-- Character controller backed by State Machine -->
-        <div class="content">
-          <header>
-            <h2>Character controller backed by State Machine</h2>
-          </header>
-          <p>
-            Built out layered state machine for character behavior, implementing
-            state transitions based on ability presses, held-button releases,
-            stamina exhaustion, and at the end of a timed ability. States can
-            have custom entry, exit, and have an explicit API to interact with
-            the character controller's state, adding movement speed modifiers,
-            knockback reduction, and collision avoidance.
-          </p>
-        </div>
-      </section>
-
-      <section
-        class="
-          spotlight
-          style1
-          orient-left
-          content-align-right
-          image-position-center
-        "
-      >
-        <!-- Peer-to-peer multiplayer -->
-        <div class="content">
-          <header>
-            <h2>Peer-to-peer multiplayer</h2>
-          </header>
-          <!--
-          <ul class="alt">
-            <li>Hosting and joining games by IP</li>
-            <li>Replicated animations</li>
-            <li>Clientside hit detection</li>
-            <li>Server-authoritative movement</li>
-            <li>
-              <h6>
-                Future plans: Rollback netcode / clientside
-                movement prediction
-              </h6>
-            </li>
-          </ul>
-          -->
-          <p>
-            The final feature before launching a downloadable demo, I built out
-            self-hosted peer-to-peer multiplayer sessions. Sessions are joinable
-            via IP, and animations and projectiles are synced across clients.
-            Hit detection was implemented on the client, while movement is
-            managed on the server (with the client sending inputs to be
-            validated and handled on the server).
-
-            <!-- TODO: Do we want to keep next steps? -->
-            Next steps are to implement clientside movement prediction with
-            rollback, and an actual lobby system for larger than 1v1 games.
-          </p>
-        </div>
-      </section>
-
-      <section class="wrapper style2 align-center">
-        <!-- Additional Features -->
-        <div class="inner">
-          <div class="content">
-            <h2>Additional Features</h2>
-            <div class="items style1 big">
-              <!-- Full gameplay loop -->
-              <section>
-                <header>
-                  <h3>Full gameplay loop</h3>
-                </header>
-                <div class="content align-center">
-                  <!-- <span class="icon style2 major fa-save" /> -->
-                  <p>Main menu, restart screen, and victory conditions</p>
-                </div>
-              </section>
-              <!-- Level design in Blender -->
-              <section>
-                <header>
-                  <h3>Level design in Blender</h3>
-                </header>
-                <div class="content align-center">
-                  <!-- <span class="icon style2 major fa-save" /> -->
-                  <p>Designed and textured a level from scratch</p>
-                </div>
-              </section>
-              <!-- Asset import pipeline -->
-              <section>
-                <div class="inner">
-                  <!-- <span class="icon style2 major fa-save" /> -->
-                  <h3>Scalable asset import pipeline</h3>
-                  <!-- <p> -->
-                  <!--   Managed multiple animations, handmade and from Mixamo, with -->
-                  <!--   active and vulnerable timings and retargeting, in an easy to -->
-                  <!--   modify structure -->
-                  <!-- </p> -->
-                  <div class="index">
-                    <section class="content">
-                      <div class="align-center">
-                        <ul class="alt">
-                          <li>
-                            A variety of animations both handmade and from
-                            Mixamo
-                          </li>
-                          <li>
-                            Easily modifiable active and vulnerable timings,
-                            stored separate from skeleton animation
-                          </li>
-                          <li>Retargeted animations for multiple skeletons</li>
-                        </ul>
-                      </div>
-                    </section>
+                  <div
+                    class="annotation iso"
+                    style="
+                      text-align: center;
+                      padding: 2em 0 2em 0;
+                      margin-bottom: 2em;
+                      margin-top: -1em;
+                    "
+                  >
+                    &ShortDownArrow; TODO: fluff &ShortDownArrow;
                   </div>
+
+                  <p>
+                    As a solo project which I was passionate about, I was
+                    mindful of keeping the feature-set constrained; I wanted to
+                    make sure that the full experience was fleshed out before
+                    additional breadth was added. With this focus, I was able to
+                    ensure that the project always felt production-ready,
+                    planning for features I knew would be necessary down the
+                    line and keeping the features constrained. With a concrete
+                    end goal always at the forefront, I was able to build out a
+                    foundation for a multiplayer arena fighting game in a little
+                    under 3 months of dedicated dev work.
+                  </p>
                 </div>
-              </section>
-              <!-- Input management system -->
-              <section>
-                <div class="inner">
-                  <!-- <span class="icon style2 major fa-save" /> -->
-                  <h3>Input management system</h3>
-                  <div class="index">
-                    <section>
-                      <div class="content align-center">
-                        <ul class="alt">
-                          <li>Custom Keybindings</li>
-                          <li>Controller Support</li>
-                          <li>Input buffering</li>
-                        </ul>
-                      </div>
-                    </section>
+
+                <!-- Spacer -->
+                <div class="col-2"></div>
+
+                <div class="col-4">
+                  <header>
+                    <h2>Tools Used</h2>
+                  </header>
+                  <ul class="alt">
+                    <li>Godot</li>
+                    <li>Blender</li>
+                    <li>Material Maker</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- TODO: Overview image -->
+            <!-- <div class="image"> -->
+            <!-- <img src="/template/forty/images/spotlight01.jpg" /> -->
+            <!-- </div> -->
+          </section>
+        </div>
+
+        <!-- Features -->
+
+        <div>
+          <div class="inner capped">
+            <div class="inset-kids">
+              <!-- Header -->
+              <header class="major inner">
+                <h1>Key Features</h1>
+              </header>
+
+              <section class="spotlights spaced">
+                <section class="spotlight">
+                  <div class="image">
+                    <img src="/images/pro-bending/knockback-stamina.gif" />
                   </div>
+                  <section class="content inner">
+                    <!-- Knockback and Stamina system -->
+                    <header>
+                      <h2>Kockback and Stamina system</h2>
+                    </header>
+                    <p>
+                      The key gameplay loop is governed by stamina and
+                      knockback. Knockback is a forced movement that increases
+                      as players take repeated hits, and knockback resistance
+                      recovers when not taking hits; stamina is a diminishing
+                      resource that can be over-drained, that recovers with
+                      inactivity. Abilities can consume stamina on use, or when
+                      the player is hit, and abilities can add modifiers to
+                      amount of knockback taken or even grant dodging
+                      invulnerability.
+                    </p>
+                  </section>
+                </section>
+
+                <section class="spotlight">
+                  <div class="image">
+                    <img src="/images/pro-bending/enemy-ai.gif" />
+                  </div>
+                  <section class="content inner">
+                    <!-- Enemy AI System -->
+                    <header>
+                      <h2>Enemy AI System</h2>
+                    </header>
+                    <p>
+                      Originally built to test out systems, the enemy controller
+                      is built to simulate human behavior without significantly
+                      changing ability controller functionality. Input
+                      management system gets swapped out depending on if the
+                      user is a player or an AI, and the character controller is
+                      completely isolated from input generation -- thus, ability
+                      development and improvements to enemy AI can occur
+                      independently.
+                    </p>
+                  </section>
+                </section>
+
+                <section class="spotlight">
+                  <div class="image">
+                    <img src="/images/pro-bending/character-controller.gif" />
+                  </div>
+                  <section class="content inner">
+                    <!-- Character controller backed by State Machine -->
+                    <header>
+                      <h2>Character controller backed by State Machine</h2>
+                    </header>
+                    <p>
+                      Built out layered state machine for character behavior,
+                      implementing state transitions based on ability presses,
+                      held-button releases, stamina exhaustion, and at the end
+                      of a timed ability. States can have custom entry, exit,
+                      and have an explicit API to interact with the character
+                      controller's state, adding movement speed modifiers,
+                      knockback reduction, and collision avoidance.
+                    </p>
+                  </section>
+                </section>
+
+                <section class="spotlight">
+                  <section class="content inner">
+                    <!-- TODO: gif for thsi -->
+                    <!-- <div class="image"> -->
+                    <!--   <img src="/images/pro-bending/multiplayer.gif" /> -->
+                    <!-- </div> -->
+                    <!-- Peer-to-peer multiplayer -->
+                    <header>
+                      <h2>Peer-to-peer multiplayer</h2>
+                    </header>
+                    <!--
+                      <ul class="alt">
+                      <li>Hosting and joining games by IP</li>
+                      <li>Replicated animations</li>
+                      <li>Clientside hit detection</li>
+                      <li>Server-authoritative movement</li>
+                      <li>
+                      <h6>
+                      Future plans: Rollback netcode / clientside
+                      movement prediction
+                      </h6>
+                      </li>
+                      </ul>
+                    -->
+                    <p>
+                      The final feature before launching a downloadable demo, I
+                      built out self-hosted peer-to-peer multiplayer sessions.
+                      Sessions are joinable via IP, and animations and
+                      projectiles are synced across clients. Hit detection was
+                      implemented on the client, while movement is managed on
+                      the server (with the client sending inputs to be validated
+                      and handled on the server).
+
+                      <!-- TODO: Do we want to keep next steps? -->
+                      Next steps are to implement clientside movement prediction
+                      with rollback, and an actual lobby system for larger than
+                      1v1 games.
+                    </p>
+                  </section>
+                </section>
+              </section>
+
+              <!-- Additional Features -->
+              <section class="">
+                <header class="major align-center">
+                  <h2>Additional Features</h2>
+                </header>
+
+                <div
+                  class="grid align-center"
+                  style="grid-template: repeat(2, 1fr) / repeat(2, 1fr)"
+                >
+                  <section>
+                    <header>
+                      <h3>Full gameplay loop</h3>
+                    </header>
+                    <!-- <span class="icon style2 major fa-save" /> -->
+
+                    <div class="content">
+                      <ul class="alt">
+                        <li>Main menu</li>
+                        <li>Settings menu</li>
+                        <li>Restart</li>
+                        <li>Victory conditions</li>
+                      </ul>
+                    </div>
+                  </section>
+                  <section>
+                    <header>
+                      <h3>Level design in Blender</h3>
+                    </header>
+                    <!-- <span class="icon style2 major fa-save" /> -->
+                    <div class="content">
+                      <p>Designed and textured a level from scratch</p>
+                    </div>
+                  </section>
+                  <section>
+                    <!-- <span class="icon style2 major fa-save" /> -->
+                    <header>
+                      <h3>Scalable asset import pipeline</h3>
+                    </header>
+                    <!-- <p> -->
+                    <!--   Managed multiple animations, handmade and from Mixamo, with -->
+                    <!--   active and vulnerable timings and retargeting, in an easy to -->
+                    <!--   modify structure -->
+                    <!-- </p> -->
+                    <div class="content">
+                      <ul class="alt">
+                        <li>
+                          A variety of animations both handmade and from Mixamo
+                        </li>
+                        <li>
+                          Easily modifiable active and vulnerable timings,
+                          stored separate from skeleton animation
+                        </li>
+                        <li>Retargeted animations for multiple skeletons</li>
+                      </ul>
+                    </div>
+                  </section>
+                  <section>
+                    <!-- <span class="icon style2 major fa-save" /> -->
+                    <header>
+                      <h3>Input management system</h3>
+                    </header>
+                    <div class="content">
+                      <ul class="alt">
+                        <li>Custom Keybindings</li>
+                        <li>Controller Support</li>
+                        <li>Input buffering</li>
+                      </ul>
+                    </div>
+                  </section>
                 </div>
               </section>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                href="https://github.com/anup-the-magic"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/anup-kishore-76b84394/"
+                class="icon brands alt fa-linkedin-in"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; 2024 Anup Kishore</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="../template/assets/js/jquery.min.js"></script>
-    <script src="../template/assets/js/jquery.scrollex.min.js"></script>
-    <script src="../template/assets/js/jquery.scrolly.min.js"></script>
-    <script src="../template/assets/js/browser.min.js"></script>
-    <script src="../template/assets/js/breakpoints.min.js"></script>
-    <script src="../template/assets/js/util.js"></script>
-    <script src="../template/assets/js/main.js"></script>
+    <script src="../template/forty/assets/js/jquery.min.js"></script>
+    <script src="../template/forty/assets/js/jquery.scrollex.min.js"></script>
+    <script src="../template/forty/assets/js/jquery.scrolly.min.js"></script>
+    <script src="../template/forty/assets/js/browser.min.js"></script>
+    <script src="../template/forty/assets/js/breakpoints.min.js"></script>
+    <script src="../template/forty/assets/js/util.js"></script>
+    <script src="../template/forty/assets/js/main.js"></script>
 
     <script type="type/javascript" src="https://livejs.com/live.js"></script>
   </body>

@@ -1,0 +1,11 @@
+.annotation {
+  font-size: 0.8em;
+  color: _palette(fg-light);
+  line-height: 1;
+
+  @include breakpoint("<=xsmall") {
+    .annotation {
+      line-height: inherit;
+    }
+  }
+}

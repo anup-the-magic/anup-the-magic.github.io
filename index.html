@@ -13,56 +13,67 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="template/assets/css/main.css" />
+    <link rel="stylesheet" href="template/forty/assets/css/main.css" />
     <noscript
-      ><link rel="stylesheet" href="template/assets/css/noscript.css"
+      ><link rel="stylesheet" href="template/forty/assets/css/noscript.css"
     /></noscript>
   </head>
 
   <body class="is-preload">
     <!-- Wrapper -->
-    <div id="wrapper" class="divided">
-      <!-- One -->
-      <section
-        class="
-          banner
-          style1
-          color6
-          orient-left
-          content-align-left
-          image-position-center
-          fullscreen
-          onload-image-fade-in onload-content-fade-right
-        "
-      >
-        <div class="content">
-          <h1>Hi, I'm Anup!</h1>
-          <p class="major">
-            An industry-tested senior software engineer, now focused on building
-            games.
-          </p>
-          <ul class="actions stacked">
-            <li>
-              <a href="#background" class="button big wide smooth-scroll"
-                >Background</a
-              >
-            </li>
-            <li>
-              <a href="#projects" class="button big wide smooth-scroll"
-                >My Projects</a
-              >
-            </li>
-          </ul>
+    <div id="wrapper">
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/projects/pro-bending.html" class="logo">
+              <strong>Project</strong>
+              <span>Pro-Bending</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header -->
+      <header id="header" class="style2 alt">
+        <a href="index.html" class="logo"
+          ><strong>Anup Kishore</strong> <span>Portfolio</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Intro -->
+      <section id="banner" class="major style2">
+        <div class="inner">
+          <header class="major">
+            <h1>Hi, I'm Anup!</h1>
+          </header>
+          <div class="content">
+            <p>
+              An industry-tested senior software engineer, now focused on
+              building games.
+            </p>
+            <ul class="actions">
+              <li>
+                <a href="#background" class="button scrolly next">Background</a>
+              </li>
+              <li>
+                <a href="#projects" class="button primary">My Projects</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="image"><img src="images/anup.jpg" alt="" /></div>
+        <div class="image"><img src="/images/anup.jpg" alt="" /></div>
       </section>
 
-      <!-- Two -->
-      <section class="wrapper style1 align-center">
+      <div id="main" class="split">
+        <!-- About me -->
         <div class="inner">
           <div class="index align-left">
             <section id="background">
-              <header>
+              <header class="major">
                 <h2>About me</h2>
               </header>
               <div class="content">
@@ -70,8 +81,8 @@
                   I'm a software engineer with a decade of industry experience,
                   currently based out of <b>San Francisco, CA</b>.
                   <!-- TODO: does the background need to be this much? -->
-                  After graduating from <b>Caltech</b> with a B.S. in Mechanical
-                  Engineering and Computer Science, I worked at at
+                  After graduating from <b>Caltech</b> in 2016 with a B.S. in
+                  Mechanical Engineering and Computer Science, I worked at at
                   <b>Second Spectrum</b>, a sports analytics startup in Los
                   Angeles. In 2019, I started at <b>Google</b>, working on
                   backend services for the Google Home app. In October 2024, I
@@ -94,70 +105,95 @@
             </section>
           </div>
         </div>
-      </section>
 
-      <section id="projects" class="wrapper style1 align-center">
+        <!-- My Projects -->
         <div class="inner">
-          <h2>My Projects</h2>
+          <header class="major"><h2>My Projects</h2></header>
           <p>
-            A small sampling of some of my personal projects. Unless otherwise
-            stated, source code available upon request!
+            A small sampling of some of my personal projects. Source code
+            available upon request!
           </p>
-        </div>
 
-        <section
-          class="
-            spotlight
-            style1
-            orient-right
-            content-align-left
-            image-position-center
-            onscroll-image-fade-in
-          "
-          id="pro-bending"
-        >
-          <div class="content">
-            <h2>Pro-Bending</h2>
-            <p>
-              A multiplayer, third-person arena fighting game based off the
-              sport from The Legend of Korra. Built using Godot and Blender, to
-              get experience building an end-to-end game, with usable
-              engineering pipelines for further feature development.
-            </p>
-            <h3>Highlights</h3>
-            <ul class="alt">
-              <li>Easily maintainable and extensible systems</li>
-              <li>Peer-to-peer multiplayer</li>
-              <li>Enemy AI backed by Behavior Tree</li>
-              <li>
-                Unique, telegraphed attack, dodge, block, with associated
-                resource costs
-              </li>
-              <li>Custom levels, modeled in Blender</li>
-            </ul>
-            <ul class="actions stacked">
-              <li>
-                <a href="projects/pro-bending.html" class="button"
-                  >Learn More</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="image">
-            <img src="template/images/spotlight01.jpg" alt="" />
-          </div>
-        </section>
-      </section>
+          <section id="projects" class="spotlights">
+            <section class="spotlight">
+              <div class="inner">
+                <div class="row">
+                  <div class="col-8">
+                    <header class="major"><h2>Pro-Bending</h2></header>
+
+                    <p>
+                      A multiplayer, third-person arena fighting game based off
+                      the sport from The Legend of Korra. Built using Godot and
+                      Blender, to get experience building an end-to-end game,
+                      with usable engineering pipelines for further feature
+                      development.
+                    </p>
+                    <a href="projects/pro-bending.html" class="button next"
+                      >Learn More</a
+                    >
+                  </div>
+                  <div class="col-4">
+                    <header class="major"><h3>Highlights</h3></header>
+                    <ul class="alt">
+                      <li>Easily maintainable and extensible systems</li>
+                      <li>Peer-to-peer multiplayer</li>
+                      <li>Enemy AI backed by Behavior Tree</li>
+                      <li>
+                        Unique, telegraphed attack, dodge, block, with
+                        associated resource costs
+                      </li>
+                      <li>Custom levels, modeled in Blender</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- TODO: do we want a image for this? -->
+              <!-- <div class="image"> -->
+              <!--   <img src="/template/forty/images/spotlight01.jpg" alt="" /> -->
+              <!-- </div> -->
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a
+                href="https://github.com/anup-the-magic"
+                class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/anup-kishore-76b84394/"
+                class="icon brands alt fa-linkedin-in"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; 2024 Anup Kishore</li>
+            <li>
+              Design forked from:
+              <a href="https://html5up.net">HTML5 UP | Forty</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <!-- Scripts -->
-    <script src="template/assets/js/jquery.min.js"></script>
-    <script src="template/assets/js/jquery.scrollex.min.js"></script>
-    <script src="template/assets/js/jquery.scrolly.min.js"></script>
-    <script src="template/assets/js/browser.min.js"></script>
-    <script src="template/assets/js/breakpoints.min.js"></script>
-    <script src="template/assets/js/util.js"></script>
-    <script src="template/assets/js/main.js"></script>
+    <script src="/template/forty/assets/js/jquery.min.js"></script>
+    <script src="/template/forty/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/template/forty/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/template/forty/assets/js/browser.min.js"></script>
+    <script src="/template/forty/assets/js/breakpoints.min.js"></script>
+    <script src="/template/forty/assets/js/util.js"></script>
+    <script src="/template/forty/assets/js/main.js"></script>
 
     <script type="type/javascript" src="https://livejs.com/live.js"></script>
   </body>
