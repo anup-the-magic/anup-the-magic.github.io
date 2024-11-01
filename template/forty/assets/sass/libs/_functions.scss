@@ -78,3 +78,6 @@
   @return val($size, $keys...);
 }
 
+@function _border_line() {
+  @return solid 1px _palette(border);
+}

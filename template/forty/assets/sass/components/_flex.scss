@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+
+  &.spread {
+    align-items: space-around;
+    justify-content: space-around;
+  }
+  &.spread-far {
+    align-items: space-between;
+    justify-content: space-between;
+  }
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.col {
+    flex-direction: column;
+  }
+
+  > .fill {
+    flex-grow: 1;
+  }
+}

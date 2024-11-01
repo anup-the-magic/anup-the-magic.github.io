@@ -21,12 +21,7 @@
     opacity: 0;
   }
 
-  > * {
-    @include inner;
-  }
-
   @include breakpoint("<=small") {
     padding-top: 2.75em;
   }
 }
-

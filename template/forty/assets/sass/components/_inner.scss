@@ -1,0 +1,34 @@
+@mixin inner {
+  @include padding(2em, 0);
+}
+
+@mixin inset {
+  margin: 0 auto;
+  max-width: _size(inner);
+  width: calc(100% - 6em);
+
+  @include breakpoint("<=small") {
+    width: calc(100% - 3em);
+  }
+}
+
+.inner {
+  @include inner;
+  @include inset;
+}
+
+.inner-kids {
+  > * {
+    @include inner;
+  }
+}
+
+.inset {
+  @include inset;
+}
+
+.inset-kids {
+  > * {
+    @include inset;
+  }
+}

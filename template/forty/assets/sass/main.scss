@@ -44,22 +44,6 @@
   )
 );
 
-// Mixins.
-
-@mixin inner {
-  > .inner {
-    @include padding(4em, 0);
-    margin: 0 auto;
-    max-width: _size(inner);
-    width: calc(100% - 6em);
-
-    @include breakpoint("<=small") {
-      @include padding(3em, 0);
-      width: calc(100% - 3em);
-    }
-  }
-}
-
 // Base.
 
 @import "base/reset";
@@ -68,23 +52,26 @@
 
 // Component.
 
+@import "components/actions";
 @import "components/annotation";
-@import "components/row";
-@import "components/section";
-@import "components/form";
 @import "components/box";
+@import "components/button";
+@import "components/contact-method";
+@import "components/form";
+@import "components/grid";
 @import "components/icon";
+@import "components/icons";
 @import "components/image";
+@import "components/inner";
 @import "components/list";
 @import "components/logo";
-@import "components/actions";
-@import "components/icons";
 @import "components/pagination";
-@import "components/table";
-@import "components/button";
-@import "components/tiles";
-@import "components/contact-method";
+@import "components/row";
+@import "components/section";
+@import "components/split";
 @import "components/spotlights";
+@import "components/table";
+@import "components/tiles";
 
 // Layout.
 
