@@ -442,13 +442,13 @@ ul.actions.fit.stacked {
   width: 100%;
 }
 
-.annotation {
+.annotation, .todo {
   font-size: 0.8em;
   color: rgba(244, 244, 255, 0.2);
   line-height: 1;
 }
 @media screen and (max-width: 480px) {
-  .annotation .annotation {
+  .annotation .annotation, .todo .annotation, .annotation .todo, .todo .todo {
     line-height: inherit;
   }
 }
@@ -2562,7 +2562,7 @@ body.is-ie header.major > h1:after {
   border-top: 0;
 }
 
-.iso {
+.iso, .todo {
   border-top: solid 1px rgba(212, 212, 255, 0.1);
   border-bottom: solid 1px rgba(212, 212, 255, 0.1);
 }
@@ -2869,6 +2869,35 @@ table.table.alt tfoot {
     height: 20em;
     width: 100% !important;
   }
+}
+
+.annotation, .todo {
+  font-size: 0.8em;
+  color: rgba(244, 244, 255, 0.2);
+  line-height: 1;
+}
+@media screen and (max-width: 480px) {
+  .annotation .annotation, .todo .annotation, .annotation .todo, .todo .todo {
+    line-height: inherit;
+  }
+}
+
+.split > * {
+  border-top: solid 1px rgba(212, 212, 255, 0.1);
+}
+.split > *:first-child {
+  border-top: 0;
+}
+
+.iso, .todo {
+  border-top: solid 1px rgba(212, 212, 255, 0.1);
+  border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+}
+
+.todo {
+  text-align: center;
+  padding: 2em 0;
+  margin: -1em 0 2em 0;
 }
 
 /* Header */
