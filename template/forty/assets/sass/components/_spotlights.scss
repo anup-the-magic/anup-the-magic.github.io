@@ -27,7 +27,7 @@
     max-width: _size(spotlight);
     padding: 2em;
 
-    text-align: left;
+    text-align: justify;
     > .content {
       // padding: 0 2em;
 
@@ -37,13 +37,18 @@
       @include vendor("align-items", "flex-start");
 
       width: 100%;
+
+      margin-right: 0;
+      margin-left: 2em;
     }
 
     &:nth-child(2n) {
-      text-align: right;
+      // text-align: right;
       @include vendor("flex-direction", "row-reverse");
 
       > .content {
+        margin-right: 2em;
+        margin-left: 0;
         @include vendor("align-items", "flex-end");
       }
     }
@@ -78,32 +83,16 @@
     }
 
     > .image {
-      background-position: center center;
-      background-size: cover;
       border-radius: 0;
-      display: block;
-      position: relative;
       width: 30%;
-      height: 100%;
-      margin: auto 2em;
 
       img {
         border-radius: 0;
-        display: block;
         width: 100%;
-      }
+        height: 100%;
 
-      // &:before {
-      //   background: transparentize(_palette(bg), 0.1);
-      //   content: "";
-      //   display: block;
-      //   height: 100%;
-      //   left: 0;
-      //   opacity: 0;
-      //   position: absolute;
-      //   top: 0;
-      //   width: 100%;
-      // }
+        object-fit: cover;
+      }
     }
   }
 
@@ -141,6 +130,7 @@
 
       > .content {
         // @include padding(4em, 3em);
+        margin: 0;
         width: 100%;
       }
     }
@@ -149,6 +139,7 @@
   @include breakpoint("<=small") {
     .spotlight {
       > .content {
+        margin: 0;
         // @include padding(3em, 1.5em);
       }
     }

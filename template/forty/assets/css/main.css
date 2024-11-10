@@ -460,6 +460,13 @@ ul.actions.fit.stacked {
 .grid-flex > * header, .box, .grid > *, .grid-flex > * {
   display: flex;
 }
+.flex.full, .box .full.content, .grid > * .full.content, .grid-flex > * .full.content, .box .full.header, .grid > * .full.header, .grid-flex > * .full.header,
+.box header.full,
+.grid > * header.full,
+.grid-flex > * header.full, .full.box, .grid > .full, .grid-flex > .full {
+  width: 100%;
+  height: 100%;
+}
 .flex.spread, .box .spread.content, .grid > * .spread.content, .grid-flex > * .spread.content, .box .spread.header, .grid > * .spread.header, .grid-flex > * .spread.header,
 .box header.spread,
 .grid > * header.spread,
@@ -492,6 +499,12 @@ ul.actions.fit.stacked {
 .grid > * header > .fill,
 .grid-flex > * header > .fill, .box > .fill, .grid > * > .fill, .grid-flex > * > .fill {
   flex-grow: 1;
+}
+.flex > .end, .box .content > .end, .grid > * .content > .end, .grid-flex > * .content > .end, .box .header > .end, .grid > * .header > .end, .grid-flex > * .header > .end,
+.box header > .end,
+.grid > * header > .end,
+.grid-flex > * header > .end, .box > .end, .grid > * > .end, .grid-flex > * > .end {
+  align-self: flex-end;
 }
 
 .box, .grid > *, .grid-flex > * {
@@ -1002,6 +1015,13 @@ input[type=radio] + label:before {
 .grid-flex > * header, .box .content, .grid > * .content, .grid-flex > * .content {
   display: flex;
 }
+.flex.full, .full.box, .grid > .full, .grid-flex > .full, .box .full.header, .grid > * .full.header, .grid-flex > * .full.header,
+.box header.full,
+.grid > * header.full,
+.grid-flex > * header.full, .box .full.content, .grid > * .full.content, .grid-flex > * .full.content {
+  width: 100%;
+  height: 100%;
+}
 .flex.spread, .spread.box, .grid > .spread, .grid-flex > .spread, .box .spread.header, .grid > * .spread.header, .grid-flex > * .spread.header,
 .box header.spread,
 .grid > * header.spread,
@@ -1042,6 +1062,12 @@ input[type=radio] + label:before {
 .grid > * header > .fill,
 .grid-flex > * header > .fill, .box .content > .fill, .grid > * .content > .fill, .grid-flex > * .content > .fill {
   flex-grow: 1;
+}
+.flex > .end, .box > .end, .grid > * > .end, .grid-flex > * > .end, .box .header > .end, .grid > * .header > .end, .grid-flex > * .header > .end,
+.box header > .end,
+.grid > * header > .end,
+.grid-flex > * header > .end, .box .content > .end, .grid > * .content > .end, .grid-flex > * .content > .end {
+  align-self: flex-end;
 }
 
 .box, .grid > *, .grid-flex > * {
@@ -2587,7 +2613,7 @@ body.is-ie header.major > h1:after {
   -ms-flex-direction: row;
   flex-direction: row;
   padding: 2em;
-  text-align: left;
+  text-align: justify;
 }
 .spotlights .spotlight > .content {
   display: -moz-flex;
@@ -2607,15 +2633,18 @@ body.is-ie header.major > h1:after {
   -ms-align-items: -ms-flex-start;
   align-items: flex-start;
   width: 100%;
+  margin-right: 0;
+  margin-left: 2em;
 }
 .spotlights .spotlight:nth-child(2n) {
-  text-align: right;
   -moz-flex-direction: row-reverse;
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
 .spotlights .spotlight:nth-child(2n) > .content {
+  margin-right: 2em;
+  margin-left: 0;
   -moz-align-items: -moz-flex-end;
   -webkit-align-items: -webkit-flex-end;
   -ms-align-items: -ms-flex-end;
@@ -2634,19 +2663,14 @@ body.is-ie header.major > h1:after {
   background-color: rgb(51.0044827586, 56.2687068966, 84.6955172414);
 }
 .spotlights .spotlight > .image {
-  background-position: center center;
-  background-size: cover;
   border-radius: 0;
-  display: block;
-  position: relative;
   width: 30%;
-  height: 100%;
-  margin: auto 2em;
 }
 .spotlights .spotlight > .image img {
   border-radius: 0;
-  display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media screen and (max-width: 980px) {
   .spotlights .spotlight {
@@ -2656,9 +2680,16 @@ body.is-ie header.major > h1:after {
     width: 100%;
   }
   .spotlights .spotlight > .content {
+    margin: 0;
     width: 100%;
   }
 }
+@media screen and (max-width: 736px) {
+  .spotlights .spotlight > .content {
+    margin: 0;
+  }
+}
+
 /* Table */
 .table-wrapper {
   -webkit-overflow-scrolling: touch;
@@ -3145,7 +3176,6 @@ body.is-preload #header.alt {
   display: flex;
   padding: 6em 0 2em 0;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 0 !important;
