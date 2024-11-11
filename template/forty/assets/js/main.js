@@ -50,25 +50,30 @@
               on,
               off;
 
+            // TODO(long-term) this is super hacky and I don't really care about it, we're just including it for persistence of parallax
+            var focusY = $t.data("focus-y");
+
+            if (!focusY || !focusY.endsWith("%")) {
+              focusY = "50%";
+            }
+
             on = function () {
-              $t.css(
-                "background-position",
-                "center 100%, center 100%, center 0px"
-              );
+              $t.css("background-position", `center ${focusY}`);
 
               $window.on("scroll._parallax", function () {
-                var pos =
+                var parallax =
                   parseInt($window.scrollTop()) - parseInt($t.position().top);
+                parallax *= intensity;
 
                 $t.css(
                   "background-position",
-                  "center " + pos * (-1 * intensity) + "px"
+                  `center calc(${focusY} - ${parallax}px)`
                 );
               });
             };
 
             off = function () {
-              $t.css("background-position", "");
+              $t.css("background-position", `center ${focusY}%`);
 
               $window.off("scroll._parallax");
             };
@@ -289,4 +294,3 @@
       if (event.keyCode == 27) $menu._hide();
     });
 })(jQuery);
-
