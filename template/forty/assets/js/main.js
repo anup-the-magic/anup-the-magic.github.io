@@ -50,7 +50,8 @@
               on,
               off;
 
-            // TODO(long-term) this is super hacky and I don't really care about it, we're just including it for persistence of parallax
+            // TODO(long-term) this is super hacky and I don't really care about it
+            // we're just including it for persistence of parallax
             var focusY = $t.data("focus-y");
 
             if (!focusY || !focusY.endsWith("%")) {
